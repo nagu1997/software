@@ -1,0 +1,129 @@
+body{
+    
+    overflow-x: hidden;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Open Sans',sans-serif;
+}
+.head1{
+    background-color: #e1b7bf;
+    height: 70px;
+    position:fixed;
+    top:0;
+    z-index: 9;
+    display: flex;
+    border-bottom: 5px solid #59437a;
+    width:100%;
+}
+.head1 .img2{
+    height:100%;
+    width:100px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.img2:hover{width: 120px;height:120%;}
+.db1{
+    height:5px;
+    width:35px;
+    background-color: black;
+    margin: 5px 27px;
+}
+
+.nav-sample{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.nav-drop{
+    display: block;
+    position: relative;
+}
+
+.drop-button{
+    height:50px;
+    width:100px;
+    background-color: transparent;
+    color:white;
+    cursor: pointer;
+    padding:10px;
+    border:0;
+    outline:0;
+    text-align: center;
+}
+.drop-content{
+    position: absolute;
+    top:50px;
+    right:40px;
+    width:300px;
+    background-color:#c262af;
+    
+    display:none; 
+    z-index: 1;
+    /* display: block; */
+}
+.drop-content a{
+    padding: 10px;
+    color:#e1b7bf;
+    height:50px;
+    text-align: center;
+    display:block;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+.nav-drop:hover .drop-content{
+    display: block;
+}
+.drop-button:hover,.drop-button:focus{
+    background-color: white;
+    color:#e1b7bf;
+}
+.drop-content a:hover{
+    background-color: #e1b7bf;
+    color:#59437a ;
+}
+
+.top{
+    position:fixed;
+    bottom:20px;
+    right:10px;
+}
+
+.go-top{
+    height:50px;
+    width:50px;
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+    color:#59437a;
+    background-color: white;
+    border: 2px solid #59437a;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.nav-buttons{
+    display: flex;
+    /* padding-right: 139px; */
+
+}
+.nav-buttons a{
+    padding-top: 25px;
+    height:100%;
+    width:100px;
+    padding-right: 5px;
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-decoration: none;
+    color:rgb(5, 59, 61);
+}
+.nav-buttons a:hover{
+    background-color: white;
+    border-top: 5px solid #59437a;
+    color:#59437a
+}
+/* .head1 div:nth-of-type(2){
+    flex-grow: 0;
+} */

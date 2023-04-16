@@ -1,0 +1,27 @@
+.container7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #59437a;
+    
+}
+.container7_button{
+    width:312px;
+    height:88px;
+    text-align: center;
+    color:white;
+    letter-spacing: 2px;
+    border-radius: 12px;
+    border:0;
+    background-color: #c262af;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 80px;
+    margin-top: 50px;
+}
+
+.container7_button:hover{
+    background-color: white;
+    color:#c262af;
+}

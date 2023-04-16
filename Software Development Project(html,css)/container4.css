@@ -1,0 +1,88 @@
+.container4{
+    
+    background-color: #e1b7bf;
+    color:#59437a;
+    padding:100px;
+    padding-left:200px;
+    padding-right: 200px;
+}
+.container4_head{
+    font-size: 55px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+.container4_block1{
+    font-size: 35px;
+    padding: 0px 100px 100px 100px;
+    opacity: 0.8;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    border-bottom: 2px solid #59437a;
+}
+.container4_content1,.container4_content2,.container4_content3,.container4_content4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:40px;
+    padding-bottom: 70px;
+    border-bottom: 2px solid #59437a;
+}
+.cntr4cnt1_blk1{
+    font-size: 19px;
+    width: 40%;
+    text-align: left;
+    position: relative;
+    top: -90px;
+}
+.cntr4cnt1_blk2{
+    width: 60%;
+    animation: blinker 2s infinite;
+}
+.cntr4cnt1_blk2 h2{
+    padding-bottom: 20px;
+
+}
+.cntr4cnt1_blk2 p{
+    padding-bottom: 50px;
+}
+.cntr4cnt1_blk2 a{
+    text-decoration: none;
+    color:#59437a;
+}
+@keyframes blinker{
+    100%{
+        opacity:0.1;
+    }
+}
+.contactme_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactme{
+    width:312px;
+    height:88px;
+    text-align: center;
+    color:white;
+    letter-spacing: 2px;
+    border-radius: 12px;
+    border:0;
+    background-color: #c262af;
+    margin-top: 80px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contactme:hover{
+    background-color: #59437a;
+}
+.phone{
+    font-size:36px;
+}

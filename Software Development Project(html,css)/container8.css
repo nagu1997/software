@@ -1,0 +1,14 @@
+.container8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e1b7bf;
+}
+.container8_head1{
+    font-size: 68px;
+    font-weight: bold;
+    word-spacing: 5px;
+    padding-top: 100px;
+    padding-bottom: 300px;
+    color:#c262af;
+}

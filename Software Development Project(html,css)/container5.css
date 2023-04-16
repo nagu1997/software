@@ -1,0 +1,29 @@
+.container5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #59437a;
+    padding: 100px;
+}
+.container5_head1{
+    text-transform: uppercase;
+    color: #d4c7e8;
+    font-size: 24px;
+    font-family:fantasy;
+    line-height: 1.5;
+    letter-spacing: 6px;
+    font-weight: 400;
+}
+.container5_head2{
+    font-size: 40px;
+    font-weight: 700;
+    color:white;
+    font-family: Montserrat,sans-serif;
+    margin: 20px auto 0;
+}
+.container5_head3{
+    font-size: 22px;
+    color:#d4c7e8;
+    margin:25px auto 0;
+}

@@ -1,0 +1,18 @@
+.container6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #59437a;
+}
+.container6_head1,.container6_head2,.container6_head3{
+    line-height: 2;
+    word-spacing: 2px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-right: 88px;
+}
+.check{
+    font-size:24px;
+    color:#c262af;
+}
