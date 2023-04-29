@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd largest Number Find</title>
+</head>
+<body>
+    <script>
+        second_largest=(arr=[])=>{
+            
+            var first=0;
+            var second=0;
+            var third=0;
+            for(var i=0;i<arr.length;i++){
+                if(arr[i]>first){
+                    second=first;
+                    first=arr[i];
+                }else if(arr[i]>second && arr[i]!=first){
+                    third=second;
+                    second=arr[i];
+                }else if(arr[i]>third && arr[i]!=second && arr[i]!=first){
+                    third=arr[i];
+                }
+            }
+            console.log("1st Greatest Number: "+first);
+            console.log("2nd Greatest Number: "+second);
+            console.log("3rd Greatest Number: "+third);
+        }
+    </script>
+</body>
+</html>

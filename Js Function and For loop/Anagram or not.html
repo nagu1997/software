@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagram or not</title>
+</head>
+<body>
+    <script>
+        anagram=(str1,str2)=>{
+            // var str1="mangoo gun";
+            // var str2="googun mnam";
+            var k=str1[0];
+            var h=0;
+            if(str1.length==str2.length){
+                for(var i=0;i<str1.length;i++){
+                    for(var j=0;j<str2.length;j++){
+                        if(k==str2[j]){
+                            k=str1[i+1];
+                            if(str1.length>i){
+                                if(h==0){
+                                    h=str2[j];
+                                }else{
+                                    h=h+str2[j];
+                                }
+                                //(need) print 
+                                console.log(h,k);
+                                break;
+                            
+                            }
+                            
+                        }
+                    }
+                   
+                }
+                console.log(str1,h);
+                if(str1==h){
+                    console.log("This is Anagram");
+                }else{
+                    console.log("This is not a anagram");
+                }
+            }
+            else{
+                console.log("This is Not Anagram")
+            }
+            
+           
+            
+        }
+        
+        //anagram onther Simplified method
+        anagram1=(strr1,strr2)=>{
+            l=strr1.toLowerCase();
+            k=strr2.toLowerCase();
+            var sort1=l.split('').sort().join('');
+            var sort2=k.split('').sort().join('');
+            console.log(strr1,strr2);
+            if(sort1 == sort2){
+                console.log("Is a Anagram");
+            }else{
+                console.log("Is a Not Angaram");
+            }
+            
+             
+        }
+        
+       
+        // console.log(anagram1("hello","elloh"));
+        // console.log(anagram1("welcome","elwcmez"));
+    </script>
+</body>
+</html>

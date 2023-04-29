@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Largest</title>
+</head>
+<body>
+    <!-- <button onclick="largest()">Largest Number</button> -->
+    Largest<input id="op"><br>
+    <!-- <button onclick="largest()">2ndLargest Number</button> -->
+    2nd largest<input id="op1">
+
+
+
+
+
+    <script>
+        //largest Number
+        largest=(arr=[])=>{
+            var k= arr[0];
+            for(var i=0;i<arr.length;i++){
+                if(arr[i]>k){
+                    k=arr[i];
+                }
+            }
+            console.log("Array Largest No is:"+k);
+            c=document.getElementById('op');
+            c.value=k;
+        }
+
+
+
+
+        //1st and 2nd largest Number
+        largest_second=(arr=[])=>{
+            var k= arr[0]; var s=arr[0];
+            for(var i=0;i<arr.length;i++){
+                if(arr[i]>k){
+                    s=k;
+                    k=arr[i];
+                }
+                else if(arr[i]>s && arr[i]!=s){
+                    s=arr[i];
+                }
+            }
+            console.log("Array Largest No is:"+k);
+            c=document.getElementById('op');
+            c.value=k;
+            console.log("Array Largest No is:"+s);
+            d=document.getElementById('op1');
+            d.value=s;
+        }
+
+
+
+        //Easy Method Find Greatest Number
+        function a(array1){
+            console.log(math.max(...array1));
+        }
+       
+    </script>
+</body>
+</html>

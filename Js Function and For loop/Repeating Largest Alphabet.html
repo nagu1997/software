@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest Repeated String </title>
+</head>
+<body>
+    <!-- Enter a String:<input id="string1">
+    <button onclick="Counted()">Counted Repeated Alphabet</button> -->
+    <script>
+        
+        counted=()=>{
+            var text="hellooof";
+            for(var i=0;i<text.length;i++){
+                count=1;
+                for(var j=i+1;j<text.length;j++){
+                    if(text[i]==text[j]){
+                    // k=text[i];
+                    count++;
+                    // text[j]="0";
+                    
+                    }
+                }    
+            }
+            if(count>1){
+                console.log("largest Repeated no's-"+count,text);
+            }
+        }
+
+
+
+
+        
+        function duplicate(){
+            var str="helooommmmmmdff333";
+            
+            var x=str.split("");
+            var a,b;
+            x.filter((item,index)=>{
+                if(x.indexOf(item)!=index){
+                    
+                    var b=item;
+                    var a=x.indexOf(item);
+                   console.log(item,a);
+                }
+            });
+            
+             console.log(Math.max(a));
+            if(a>1){
+                        console.log("largest Repeated no-is-"+a,b);
+                        
+                    }
+                    
+           
+        }
+        
+
+        duplicate2=()=>{
+            for(var i=0;i<str.length;i++){
+                for(var j=i+1;j<str.length-1;j++){
+                    if(str[i]==str[j]){
+                        count++;
+                        str[j]=str[i];
+                        var k=str[j];
+                        console.log(str[j],count);
+                        
+                    }
+                }
+                 
+            }console.log(k);
+        }
+    </script>
+</body>
+</html>

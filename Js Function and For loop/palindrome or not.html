@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+</head>
+<body>
+    <script>
+        //palindrome String
+       function palindrome(x){
+            for(var i=0;i<x.length/2;i++){
+                if(x[i]!==x[x.length-1-i]){
+                    console.log("Not Palindrome");
+                    return;
+                } 
+            }
+            console.log("palindrome");
+        }
+        //palindrome String use while loop
+        function palindrome1(x){
+            var left=0;
+            var right=x.length-1;
+            while(left<right){
+                if(x[left]!=x[right]){
+                    return "Not a Palindrome";
+                }
+                left++;
+                right--;
+            }
+            return 'Palindrome';
+        }
+         // Separate Condition check Use Split,reverse,join
+        function palindrome_split(x){
+            if(x.split("").reverse().join("")== x){
+                console.log("palindrome");
+            }
+            else{
+                console.log("not a palindrome");
+            } 
+        }
+        // return True or false only,Use split,reverse,join
+        function palindrome_split_return(x){ 
+            return x.split("").reverse().join("")== x;
+        }
+        //Palindrome check a number (or) Reverse a Number
+        function Palindrome_Number(x){
+            var rev=0;
+            temp=x;
+            //x value x=121 (or) x="121" - Both are Taking.....
+            while(x>0){
+                rem=x%10;
+                x=parseInt(x/10);
+                rev=rev*10+rem;
+            }
+            if(rev==temp){
+                console.log(temp+"=="+rev);
+                console.log("palindrome");
+            }
+            else{
+                console.log(temp+"!="+rev);
+                console.log("not a palindrome");
+            } 
+        }
+    </script>
+</body>
+</html>

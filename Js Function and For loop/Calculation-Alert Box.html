@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation-AlertBox</title>
+</head>
+<body>
+    <div>INPUT1:<input id="in1"></div>
+	<div>INPUT2:<input id="in2"></div>
+	<button onclick="calc('+');">+</button>
+	<button onclick="calc('-')">-</button>
+	<button onclick="calc('*')">*</button>
+	<button onclick="calc('/')">/</button>
+	<div>OUTPUT:<input id="out"></div>
+    <script>
+        alert1=()=>{
+            if(document.getElementById("in1").value=="" && document.getElementById("in2").value==""){
+                alert("Enter Both Input values Must...");
+                document.getElementById("out").innerHTML="";
+                return;
+            }else if(document.getElementById("in1").value==""){
+                alert("Enter 1st Input Value-");
+                document.getElementById("out").innerHTML="";
+                return;
+            }else if(document.getElementById("in2").value==""){
+                alert("Enter 2nd Input Value-");
+                document.getElementById("out").innerHTML="";
+                return;
+            }
+        }
+        calc=(x)=>{
+            var a=parseInt(document.getElementById("in1").value);
+			var b=parseInt(document.getElementById("in2").value);
+            var c=document.getElementById("out");
+            if(x=="+"){
+                if(document.getElementById("in1").value=="" || document.getElementById("in2").value==""){
+                    alert1();
+                }else{
+                    add(a,b,c);
+                }  
+            }
+            else if(x=='-'){
+                if(document.getElementById("in1").value=="" || document.getElementById("in2").value==""){
+                    alert1();
+                }else{
+                    sub(a,b,c);
+                }  
+				
+			}
+			else if(x=='*'){
+                if(document.getElementById("in1").value=="" || document.getElementById("in2").value==""){
+                    alert1();
+                }else{
+                    mul(a,b,c);
+                }
+				
+			}
+			else if(x=='/'){
+                if(document.getElementById("in1").value=="" || document.getElementById("in2").value==""){
+                    alert1();
+                }else{
+                    div(a,b,c);
+                }
+				
+			}
+        }
+        add=(a,b,c)=>{
+            c.value=a+b;
+        }
+        sub=(a,b,c)=>{
+			if(a>b){
+				c.value=a-b;
+				console.log("SUB-"+c.value);
+			}else{
+				c.value=b-a;
+				console.log("SUB-"+c.value);
+			}
+			
+		}
+		mul=(a,b,c)=>{
+			c.value=a*b;
+			console.log("MUL-"+c.value);
+		}
+		div=(a,b,c)=>{
+			if(a>b){
+				c.value=a/b;
+				console.log("DIV-"+c.value);
+			}else{
+				c.value=b/a;
+				console.log("DIV-"+c.value);
+			}
+		}
+    </script>
+</body>
+</html>
