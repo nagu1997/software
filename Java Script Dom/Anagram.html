@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagram</title>
+</head>
+
+<body>
+    <script>
+
+
+        //Anagram
+        hello = () => {
+
+            const str1 = "meate";
+            const str2 = "teamr";
+            const obj1 = {};
+            const obj2 = {};
+            if (str1.length == str2.length) {
+                for (let i = 0; i < str1.length; i++) {
+                    if (obj1[str1[i]]) {
+                        obj1[str1[i]] = obj1[str1[i]] + 1;
+                    } else {
+                        obj1[str1[i]] = 1;
+                    }
+                }
+                console.log(obj1);
+                for (let i = 0; i < str2.length; i++) {
+                    if (obj2[str2[i]]) {
+                        obj2[str2[i]] += 1;
+                    } else {
+                        obj2[str2[i]] = 1;
+                    }
+                }
+                console.log(obj2);
+
+                for (let i in obj1) {
+                    if (obj1[i] !== obj2[i]) {
+                        return false;
+                    }
+                }
+                console.log("This Is Anagram");
+                return true;
+
+
+            }
+        }
+        hello();
+    </script>
+</body>
+
+</html>

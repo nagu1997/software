@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowels and Consonants</title>
+</head>
+<body>
+    <script>
+    function vowels(){
+        let s = "welcome hello mani's+ f=e mz";
+        let c, i;
+        let ca=s.split(/[.\-=/_]/);
+        ca.join();
+        for (i=0; i<=s.length-1; i++){
+            c = s[i]  // or s.charAt(i)
+            if (c=="a"|| c=="e"|| c=="i" || c=="o" || c=="u"){
+                console.log("vowels-"+c);
+            }else{
+                if(c==" " || c==/[.\-=/_]/){
+                    continue;
+                }else{
+                    console.log("Consonants-"+c);
+                }
+            }
+        }
+    }
+    vowels();
+        
+    </script>
+</body>
+</html>

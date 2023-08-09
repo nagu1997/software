@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="validate.js"></script>
+</head>
+<body>
+    <form name="form1">
+        <br/><br/>
+        <input type="text" name="name" placeholder="Enter Your Name"><br/>
+        <input type="date" name="dob" placeholder="Enter Your Date Of Birth"><br/>
+        <input type="text" name="phone" placeholder="Enter Your Mobile Number" maxlength="10" required="true"><br/>
+        <input type="email" name="email" placeholder="Enter Your Email"><br/>
+        <input type="password" name="pwd1" placeholder="Enter Password"><br/>
+        <span id="pwd"></span>
+        <input type="password" name="pwd2" placeholder="Confirm Password"><br/>
+        <input type="submit" value="submit" onclick="validate()"><br/><br/>
+    </form>
+       
+</body>
+</html>

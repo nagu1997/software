@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3 schools</title>
+    <link rel="stylesheet" type="text/css" href="w3html_edit_js.css">
+</head>
+<body>
+<div class="main">
+    <div class="cont1" id="ctr1">
+        <div class="cont1-blk1" id="ctr11">
+            <div class="cont1-blk1-head">
+                <h1>HTML</h1>
+            </div>
+            <div class="cont1-blk1-button">
+                <button class="btn1" id="button1" onclick="nextwindow('html')">Add html</button><br><br>
+                <button class="btn1" id="button2" onclick="nextwindow('css')">Add CSS</button><br><br>
+                <button class="btn1" id="button3" onclick="nextwindow('js')">Add Java Script</button>
+            </div>
+        </div>
+        <div class="cont1-blk2" id="ctr12">
+            
+            <div class="cont1-blk2-cont">
+                Thank You
+            </div>
+        
+        </div>
+    </div>
+    <div class="cont2" id="ctr2">
+        <h1>HTML is <p id="demo1">5000</p></h1>
+        <h1>CSS is <p id="demo2">2000</p></h1>
+        <h1>Java Script is <p id="demo3">9000</p></h1>
+
+        <div id="bottom">
+            
+        </div>
+    </div>
+</div>
+    <script>
+        nextwindow=(query)=>{
+            var a=document.getElementById('demo1').innerHTML;
+            var b=document.getElementById('demo2').innerHTML;
+            var c=document.getElementById('demo3').innerHTML;
+            if(query=="html"){
+                document.getElementById('demo1').style.display="block";
+                fun();
+                
+            }else if(query=="css"){
+                document.getElementById('demo2').style.display="block";
+                fun();
+                
+            }else if(query=="js"){
+                document.getElementById('demo3').style.display="block";
+                fun();
+               
+            }else{return error;}
+            fun=()=>{
+            if(a && b && C){
+                var d=+ +a+ +b+ +c;
+            }else if(a && b){
+                var d=+ +a+ +b;
+            }else if(b && c){
+                var d=+ +c+ +b;
+            }else if(a && c){
+                var d=+ +a+ +c;
+            }else if(a){
+                var d=+ +a;
+            }else if(b){
+                var d=+ +b;
+            }else if(c){
+                var d=+ +c;
+            }
+            }
+
+            document.getElementById('ctr1').style.width="80%";
+            document.getElementById('ctr2').style.display="block";
+            document.getElementById('ctr1').style.padding="50px";
+            document.getElementById('bottom').innerHTML=`<hr> <br> <h1>TOTAl = ${d}</h1><br> <hr>`;
+            document.getElementById('bottom').style.bottom="10px";
+            document.getElementById('bottom').style.position="fixed";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class-constructor</title>
+    <style>
+fieldset{
+    width:40%;
+    height:200px;
+}
+    </style>
+</head>
+<body>
+    <form method="post">
+        <fieldset>
+            <legend>student</legend>
+            <input type="number" placeholder="Enter a ID" id="id1"><br>
+            <input type="text" placeholder="Enter a Name" id="name1"><br>
+            <input type="text" placeholder="Enter a gender" id="gender1" list="gen"><br>
+            <datalist id="gen">
+                <option value="male"></option>
+                <option value="female"></option>
+            </datalist>
+            <input type="number" placeholder="Enter a Age" id="age1"><br>
+            <input type="text" placeholder="Choose a subject1" id="subject1" list="sub1"><br>
+                <datalist id="sub1">
+                    <option value="Tamil">
+                    </option><option value="English">   
+                    </option><option value="Maths">
+                    </option><option value="Science"> 
+                    </option><option value="Social">
+                    </option>
+                </datalist>
+            <input type="text" placeholder="Choose a Staffname of Subject1" id="staff1" list="stamil"><br>
+
+            <input type="text" placeholder="Choose a subject2" id="subject2" list="sub1"><br>
+                <datalist id="sub1"><option value="English"></option><option value="English"></option><option value="Maths"></option><option value="Science"></option><option value="Social"></option></datalist>
+                <input type="text" placeholder="Choose a Staffname of Subject2" id="staff2" list="senglish"><br>
+
+
+
+
+
+            <datalist id="stamil"><option value="Guna"></option><option value="Gopal"></option><option value="Maleeswaran"></option><option value="Murugan"></option><option value="Meena"></option></datalist>
+            <datalist id="senglish"><option value="sunadari"></option><option value="Subbu"></option><option value="Thandeswaran"></option><option value="Suntharan"></option><option value="velliyanai"></option></datalist>
+            <datalist id="smaths"><option value="priya"></option><option value="venkat"></option><option value="vimala"></option><option value="Mathsoothanan"></option><option value="Menaka"></option></datalist>
+            <datalist id="sscience"><option value="lakshmi"></option><option value="Gopal G"></option><option value="settu"></option><option value="Arumugam"></option><option value="Roja"></option></datalist>
+            <datalist id="ssocial"><option value="Guna sundari"></option><option value="arukadavul"></option><option value="Gunamalalini"></option><option value="Bala Murugan"></option><option value="Valli"></option></datalist>
+        </fieldset>
+    </form>
+    <input type="submit" value="submit" onclick="student1()">
+    
+    <form method="post">
+        <fieldset>
+            <legend>Teacher</legend>
+            <input type="number" placeholder="Enter a ID" id="id2"><br>
+            <input type="text" placeholder="Enter a Name" id="name2"><br>
+            <input type="text" placeholder="Enter a gender" id="gender2"><br>
+            <input type="number" placeholder="Enter a Age" id="age2"><br>
+            <input type="number" placeholder="Enter a Experience" id="exp2"><br>
+            <input type="number" placeholder="Enter a Expected salary" id="salary2"><br>
+        </fieldset>
+    </form> 
+    <input type="submit" value="submit" onclick="teacher1()"> 
+    
+    <script>
+            // var stamil=document.getElementById('staff1');
+            // stamil.style['background-color']="red";
+    function staffchoose(){
+        
+            var sub11=document.getElementById("subject1").value;
+            var st1=document.getElementById('staff1');
+            var st2=document.getElementById('staff2');
+            var st3=document.getElementById('staff3');
+            var st4=document.getElementById('staff4');
+            var st5=document.getElementById('staff5');
+            // if(sub11=="Tamil"){
+            //     st1.style.list="stamil";
+            // }elseif(sub11=="English"){
+                
+            //     st.style.list="stamil";
+            // }
+    }
+    function student1(){
+        let sid=document.getElementById('id1').value;
+        let sname=document.getElementById('name1').value;
+        let sgender=document.getElementById('gender1').value;
+        let sage=document.getElementById('age1').value;
+        let ssubject1=document.getElementById('subject1').value;
+        let ssubject2=document.getElementById('subject2').value;
+        let sstaff1=document.getElementById('staff1').value;
+        let sstaff2=document.getElementById('staff2').value;
+        
+        console.log(sid,sname,sgender,sage,ssubject1,sstaff1,ssubject2,sstaff2);
+        class student{
+            constructor(id,name,gender,age,ssubject1,sstaff1,ssubject2,sstaff2){
+                this.name=name;
+                this.age=age;
+                this.gender=gender;
+                this.id=id;
+                this.ssubject1=ssubject1;
+                this.ssubject2=ssubject2;
+                this.sstaff1=sstaff1;
+                this.sstaff2=sstaff2;
+            }
+        }
+        var newstudent=new student(sid,sname,sgender,sage,ssubject1,sstaff1,ssubject2,sstaff2);
+        console.log(newstudent);
+
+    }
+    function teacher1(){
+        let tid=document.getElementById('id2').value;
+        let tname=document.getElementById('name2').value;
+        let tgender=document.getElementById('gender2').value;
+        let tage=document.getElementById('age2').value;
+        let tsalary=document.getElementById('salary2').value;
+        let texp=document.getElementById("exp2").value;
+        
+        console.log(tid,tname,tgender,tage,tsalary,texp);
+        class teacher{
+            constructor(id,name,gender,age,salary,experience){
+                this.name=name;
+                this.age=age;
+                this.gender=gender;
+                this.id=id;
+                this.salary=salary;
+                this.experience=experience;
+            }
+        }
+        const newteacher=new teacher(tid,tname,tgender,tage,tsalary,texp);
+        console.log(newteacher);
+    }
+        
+        // class teacher extends student{
+        //     constructor(id,name,gender,age,experience){
+        //         super(id,name,gender,age)
+        //             this.experience=experience;
+                
+        //     }
+        // }
+        // const school=new teacher(sid,sname,sgender,sage,texp);
+        // console.log(school);
+    
+        
+        
+    
+    </script>
+    
+</body>
+</html>

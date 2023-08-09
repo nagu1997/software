@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Documents are Fetched</title>
+    <!-- --allow-file-access-from-files
+    open -a 'Google Chrome' --args -allow-file-access-from-files
+    google-chrome  --allow-file-access-from-files
+    C:\ ... \Application\chrome.exe --allow-file-access-from-files -->
+</head>
+<body>
+    <script>
+    // load('file:///C:/Users/admin/Desktop/nm/kasi%20sir/constructor.html')
+    fetch('file:///C:/Users/admin/Desktop/nm/kasi%20sir/constructor.html')
+    .then(response => response.json())
+    .then(json => console.log(json)
+    ).catch(
+      json=>console.log("not working")
+    )
+    </script>
+</body>
+</html>

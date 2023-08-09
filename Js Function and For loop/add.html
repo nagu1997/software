@@ -1,0 +1,40 @@
+ <html>
+<head>
+<title>ALL Operations</title>
+</head>
+<body>
+	<div>INPUT1:<input id="in1">
+		<!-- <button onclick="swipe();swipea();"><-></button> -->
+	</div>
+	<div>INPUT2:<input id="in2"></div>
+	<button onclick="add()">+</button>
+	<button onclick="sub()">-</button>
+	<button onclick="mul()">*</button>
+	<button onclick="div()">/</button>
+	<div>OUTPUT:<input id="out"></div>
+	<script>
+		// swipe=()=>{
+		// 	document.getElementById("in1").value=document.getElementById("in2").value;	
+		// }
+		// swipea=()=>{
+		// 	document.getElementById("in2").value=document.getElementById("in1").value;	
+		// }
+		add=()=>{
+			document.getElementById("out").value=parseInt(document.getElementById("in1").value)+parseInt(document.getElementById("in2").value);
+		}
+		sub=()=>{
+			var a=parseInt(document.getElementById("in1").value);
+			var b=parseInt(document.getElementById("in2").value);
+			if(a>b){document.getElementById("out").value=a-b;}else{document.getElementById("out").value=b-a;}
+		}
+		mul=()=>{
+			document.getElementById("out").value=parseInt(document.getElementById("in1").value)*parseInt(document.getElementById("in2").value);
+		}
+		div=()=>{
+			var a=parseInt(document.getElementById("in1").value);
+			var b=parseInt(document.getElementById("in2").value);
+			if(a>b){document.getElementById("out").value=a/b;}else{document.getElementById("out").value=b/a;}
+		}
+	</script>
+</body>
+</html>

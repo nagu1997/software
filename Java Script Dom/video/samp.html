@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .main{
+            background-color: red;
+            height: 200px;
+        }
+        span{
+            text-orientation: upright;
+            writing-mode: vertical-rl;
+            margin-inline: 60px auto;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <video id="viewer" src="mov_bbb.mp4"></video>
+    <button onclick="playPause()">play/pause</button> -->
+    <div class="hello">
+    <video class="video1" src="mov_bbb.mp4"></video>
+    <button onclick="playPause()">Play/Pause</button> 
+    </div>
+    <div class="main">
+        <span>hheello00</span>
+        <span>welcomeiisi</span>
+        <span>hheello</span>
+    </div>
+    <script>
+        // var myVideo = document.getElementById("video1"); 
+        const player = document.querySelector(".hello"); 
+        const myVideo = player.querySelector(".video1");
+        function playPause() { 
+//   if (myVideo.paused) 
+//     myVideo.play(); 
+//   else 
+//     myVideo.pause(); 
+// } 
+    const method = myVideo.paused ? 'play' : 'pause' ;
+    myVideo[method]();
+
+    //     var videoar = document.getElementsById('viewer');
+    // function playPause() { 
+        
+    //     if (videoar.paused) 
+    //         videoar.play(); 
+    //     else 
+    //         videoar.pause(); 
+    // } 
+
+    //   if (video1.paused){
+//     video1.play(); }
+//   else{ 
+//     video1.pause(); }
+//     if (video.paused || video.ended) {
+//    video.play()
+//   playPause.innerHTML = 'Pause Video'
+//   playPause.style.backgroundImage = 'url(https://alcove.bensmiles.com/wp-content/uploads/Alcove-Icon_Pause.svg)'
+
+// } else {
+//   video.pause()
+//   playPause.innerHTML = 'Play Video'
+//   playPause.style.backgroundImage = 'url(https://alcove.bensmiles.com/wp-content/uploads/Alcove-Icon_Play.svg)'
+// } 
+        }
+    </script>
+</body>
+</html>
